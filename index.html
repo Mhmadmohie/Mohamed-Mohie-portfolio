@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Mohie. Engineer | MEP Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#111827', // Dark charcoal
+                        'secondary': '#1F2937', // Slightly lighter dark
+                        'accent': '#14B8A6', // Teal/Cyan
+                    }
+                }
+            }
+        }
+
+        // Simple function to toggle the mobile menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body class="bg-primary text-gray-200 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-secondary shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-extrabold text-accent">Mohamed Mohie</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-accent transition duration-300 p-2 rounded-lg">Home</a>
+                    <a href="#about" class="hover:text-accent transition duration-300 p-2 rounded-lg">Expertise</a>
+                    <a href="#projects" class="hover:text-accent transition duration-300 p-2 rounded-lg">Projects</a>
+                    <a href="#contact" class="bg-accent text-primary px-4 py-2 rounded-full hover:bg-teal-600 transition duration-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-accent focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="md:hidden hidden bg-secondary">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 hover:text-accent">Home</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 hover:text-accent">Expertise</a>
+                <a href="#projects" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 hover:text-accent">Projects</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium bg-accent text-primary hover:bg-teal-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-8">
+        <!-- Hero Section -->
+        <section id="home" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <!-- Text Content -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <p class="text-lg text-accent mb-2 tracking-wider uppercase font-semibold">MEP Mechanical Engineer</p>
+                    <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-white mb-4">
+                        Mohamed Mohie
+                    </h1>
+                    <h2 class="text-2xl sm:text-3xl text-gray-400 mb-6">
+                        HVAC, Plumbing, and Firefighting design engineer
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                        I design and optimize mechanical building systems for energy efficiency, compliance, and occupant comfort, leveraging BIM tools like Revit.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#projects" class="px-8 py-3 bg-accent text-primary font-bold rounded-full shadow-lg hover:bg-teal-600 transition duration-300 transform hover:scale-105">
+                            View Case Studies
+                        </a>
+                        <!-- Resume link placeholder -->
+                        <a href="https://shengmenofiaedu-my.sharepoint.com/:f:/g/personal/mohamed_mohy_160702_sh-eng_menofia_edu_eg/IgDXE0BclnlGTKN8QP0q0lmLAdC1DfvxDKyW-7USwYT_3K8" class="px-8 py-3 border-2 border-gray-600 text-gray-300 font-bold rounded-full hover:border-accent hover:text-accent transition duration-300 transform hover:scale-105">
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image/Avatar -->
+                <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
+                    <!-- Placeholder image with a modern, rounded style -->
+                    <img
+                        src="https://placehold.co/400x400/1F2937/14B8A6/svg?text=MM"
+                        alt="Professional Avatar"
+                        class="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full border-4 border-accent shadow-2xl transition duration-500 hover:shadow-accent/50"
+                        onerror="this.onerror=null; this.src='https://placehold.co/320x320/374151/D1D5DB?text=Profile';"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise/Skills Section -->
+        <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-secondary">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-extrabold text-white mb-10 text-center">Core Expertise & Tools</h2>
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- Expertise Description -->
+                    <div class="lg:w-1/2 p-6 bg-primary rounded-xl shadow-2xl transition duration-500 hover:shadow-accent/30">
+                        <h3 class="text-2xl font-bold text-accent mb-4">Focus Areas</h3>
+                        <ul class="space-y-3 text-gray-400 list-disc list-inside">
+                            <li>**Plumbing Design:** Domestic water, sanitary, and storm drainage systems compliant with IPC/UPC and ASPI.</li>
+                            <li>**Fire Protection:** Design and coordination of sprinkler systems (NFPA).</li>
+                            <li>**HVAC Systems Design:** DX, VRF, Chilled Water, and Hydronic systems sizing and layout.
+                            <li>**Energy Modeling:** Utilizing tools for load calculations and efficiency optimization.</li>
+                            <li>**Code Compliance:** Expertise in IBC, ASHRAE, and local building codes.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skills Grid - Updated with Navisworks, Specific Calcs, and LEED -->
+                    <div class="lg:w-1/2 p-6 bg-primary rounded-xl shadow-2xl transition duration-500 hover:shadow-accent/30">
+                        <h3 class="text-2xl font-bold text-accent mb-4">Technical Skills & Certifications</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <!-- Skill Tags -->
+                            <div class="skill-tag">Revit MEP</div>
+                            <div class="skill-tag">AutoCAD</div>
+                            <div class="skill-tag">Navisworks</div>
+                            <div class="skill-tag">Load Calculations</div>
+                            <div class="skill-tag">Fire Calculation</div>
+                            <div class="skill-tag">Plumbing Calculation</div>
+                            <div class="skill-tag">ASHRAE Standards</div>
+                            <div class="skill-tag">NFPA Standards</div>
+                            <div class="skill-tag">LEED</div>
+                            <div class="skill-tag">BIM Coordination</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Custom CSS for Skill Tags -->
+        <style>
+            .skill-tag {
+                @apply bg-gray-800 text-sm text-gray-300 font-medium py-2 px-4 rounded-full text-center border border-gray-700 transition duration-300 hover:bg-accent hover:text-primary hover:border-accent shadow-md;
+            }
+        </style>
+
+        <!-- Projects Section - Updated with real project names and descriptions -->
+        <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-extrabold text-white mb-12 text-center">Select Design Projects</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project Card 1: Royal Driyah Opera House (Plumbing/Firefighting) -->
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/1F2937/14B8A6?text=Opera+House+Design" alt="Royal Driyah Opera House" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Royal Driyah Opera House, KSA</h3>
+                            <p class="text-gray-400 mb-4">Designed the plumbing system for the Royal Driyah Opera House in historic Driyah, Saudi Arabia, incorporating desert landscape, local culture, and Najdi traditions. Responsible for designing, modeling, and coordinating firefighting, drainage, and water supply systems, along with preparing related mechanical engineering calculation reports.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tag">Plumbing Design</span>
+                                <span class="tag">Firefighting</span>
+                                <span class="tag">Water Supply</span>
+                            </div>
+                            <a href="#" class="inline-block text-accent hover:text-teal-300 font-semibold transition duration-300">View Project Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Marjan Resort (Sustainable Plumbing) -->
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/1F2937/14B8A6?text=Resort+Plumbing" alt="Marjan Luxury Mixed-Use Resort" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Marjan Luxury Mixed-Use Resort, UAE</h3>
+                            <p class="text-gray-400 mb-4">Designed a plumbing system, including greywater recycling and high-efficiency fixtures, for a 19-story residential building.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tag">Greywater Recycling</span>
+                                <span class="tag">IPC Compliance</span>
+                                <span class="tag">Water Efficiency</span>
+                            </div>
+                            <a href="#" class="inline-block text-accent hover:text-teal-300 font-semibold transition duration-300">View Project Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: Jedda Logistics (Fire Protection) -->
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/1F2937/14B8A6?text=Industrial+Fire+Suppression" alt="Jedda Logistics Area Fire Protection" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Jedda Logistics Area Fire Protection, UAE</h3>
+                            <p class="text-gray-400 mb-4">Developed a full firefighting system design for a high-hazard industrial warehouse in compliance with NFPA 13.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tag">NFPA 13</span>
+                                <span class="tag">Wet Pipe</span>
+                                <span class="tag">Hydraulic Calcs</span>
+                            </div>
+                            <a href="#" class="inline-block text-accent hover:text-teal-300 font-semibold transition duration-300">View Project Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom CSS for Project Cards and Tags -->
+        <style>
+            .project-card {
+                @apply bg-secondary rounded-xl shadow-xl overflow-hidden border border-gray-700 transition duration-500 transform hover:-translate-y-1 hover:shadow-accent/50;
+            }
+            .tag {
+                @apply bg-gray-700 text-xs text-gray-300 px-3 py-1 rounded-full;
+            }
+        </style>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-secondary">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-4xl font-extrabold text-white mb-4">Ready to Discuss Your Next Project?</h2>
+                <p class="text-gray-400 mb-8">
+                    I'm available for new opportunities and consulting roles. Reach out to discuss how my MEP expertise can benefit your team.
+                </p>
+
+                <form class="space-y-6 p-8 bg-primary rounded-xl shadow-2xl transition duration-500 hover:shadow-accent/30">
+                    <div>
+                        <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-accent focus:border-accent transition duration-300">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-accent focus:border-accent transition duration-300">
+                    </div>
+                    <div>
+                        <textarea placeholder="Your Message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-accent focus:border-accent transition duration-300"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-4 py-3 bg-accent text-primary font-bold rounded-lg shadow-lg hover:bg-teal-600 transition duration-300 transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                    <p class="text-sm text-gray-500 pt-2">
+                        *Note: This is a static form template. You will need to hook it up to a backend service like Formspree or a serverless function to actually send emails.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-gray-800 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; <span id="current-year"></span> Mohamed Mohie. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/MohamedMohie" class="text-gray-400 hover:text-accent transition duration-300">LinkedIn</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition duration-300">GitHub</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition duration-300">Certifications</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script to set the current year in the footer -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
